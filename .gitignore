@@ -47,11 +47,11 @@ Temporary Items
 .apdisk
 
 
-#Folders
+#Folders=======================================================================
 _repertoire/
-tests/
+_projects/
 tutorials/
-vendor/
 
-#Files
+
+#Files=========================================================================
 ears_maxkey.txt
