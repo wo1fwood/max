@@ -38,12 +38,25 @@
 		"subpatcher_template" : "ears_template",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 768.0, 480.0, 60.0, 22.0 ],
+					"style" : "",
+					"text" : "loadbang"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-2",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 512.0, 192.0, 144.0, 34.0 ],
+					"patching_rect" : [ 512.0, 192.0, 145.0, 34.0 ],
 					"style" : "",
 					"text" : "at patch reset, counter at default state"
 				}
@@ -71,7 +84,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 624.0, 64.0, 172.0, 75.0 ],
 					"style" : "",
-					"text" : "args: \nkey-value-1\nkey-value-2\nmin-counter-value\nmax-counter-value"
+					"text" : "args: \nkey-value-1 (to min)\nkey-value-2 (to max)\nmin-counter-value\nmax-counter-value"
 				}
 
 			}
@@ -353,8 +366,6 @@
 				"box" : 				{
 					"id" : "obj-40",
 					"maxclass" : "number",
-					"maximum" : 127,
-					"minimum" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -509,6 +520,15 @@
 			}
  ],
 		"lines" : [ 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-1", 0 ]
+				}
+
+			}
+, 			{
 				"patchline" : 				{
 					"destination" : [ "obj-92", 0 ],
 					"disabled" : 0,
