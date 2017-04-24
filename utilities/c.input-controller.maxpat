@@ -38,12 +38,25 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-22",
+					"linecount" : 11,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 544.0, 416.0, 285.5, 158.0 ],
+					"style" : "",
+					"text" : "Explanation: In order to ensure that MIDI pedal controllers would behave properly, the important data being sent to max needed to be programmable;  everything from the MIDI controller number and value, to setting a custom delay window to properly handle MIDI controllers that have a hard-coded MIDI-off message.\n\nThis patch aims to handle every possible MIDI controller behavior, removing any guesswork or reprogramming by an end-user."
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-21",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1091.0, 880.0, 157.0, 34.0 ],
+					"patching_rect" : [ 1091.0, 880.0, 158.0, 34.0 ],
 					"style" : "",
 					"text" : "set patch-state to 1 to allow pedal date into projects"
 				}
@@ -65,13 +78,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-70",
-					"linecount" : 5,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 560.0, 416.0, 258.0, 75.0 ],
+					"patching_rect" : [ 544.0, 336.0, 272.0, 62.0 ],
 					"style" : "",
-					"text" : "because of the nature of certain MIDI hardware pedals, to be safe, no manual event trigger can be within 1500ms of each other. Otherwise you will introduce errors if poorly coded pedals are used (state-switching)."
+					"text" : "This patch was designed to be completely self-programming, ensuring whatever data was incoming via a controller would be formatted correctly."
 				}
 
 			}
@@ -3515,7 +3528,7 @@
 							"modernui" : 1
 						}
 ,
-						"rect" : [ 8.0, 218.0, 1215.0, 817.0 ],
+						"rect" : [ 45.0, 215.0, 1215.0, 817.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
