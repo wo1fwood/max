@@ -26,5 +26,5 @@ Namespaces are a way to greatly reduce time in writing new objects in max. By pr
 *Note: gen~ abstractions follow the above naming scheme as they are easier to distinguish by their .gendsp file extension*
 
 # Licensing
-All of my max patches licensed under the MIT license. This means that any user is free to use the Max patches for their own personal use, as defined in the MIT license (http://www.opensource.org/licenses/mit-license.php)
+All of my max patches licensed under the MIT license. This means that any user is free to use these files for their own personal use, as defined in the MIT license (http://www.opensource.org/licenses/mit-license.php).
 
