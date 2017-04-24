@@ -112,8 +112,11 @@ Temporary Items
 #Folders=======================================================================
 _repertoire/
 _projects/
-tutorials/
-
+tutorials/mfriday/
+tutorials/oshcneller/
+tutorials/pvoc_patches/
+tutorials/timplace/
+tutorials/zsheets/
 
 #Files=========================================================================
 >>>>>>> origin/master
