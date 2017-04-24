@@ -1,0 +1,143 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+\readonlydoc1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww12020\viewh18900\viewkind0
+\pard\tx360\tx1800\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 \
+
+\b\fs36 jg.granulate~ reference
+\fs24 \
+
+\b0 \
+
+\b\fs26 Arguments
+\b0\fs24 \
+\
+\pard\tx360\tx1800\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1780\fi-1780\ql\qnatural\pardirnatural
+\cf0 	
+\b symbol
+\b0 	Obligatory. Names the buffer~ object containing the sample to be used by jg.granulate~ for granulation.\
+\
+	
+\b int
+\b0 	Optional. A second argument may specify the number of output channels. The default number of channels is 1. If the buffer~ being granulated has more than one channel, jg.granulate~ will read only the first channel, unless a chan message tells it otherwise. If jg.granulate~ has more than one output channel, it will pan grains between the outputs, taking into account any panrange messages received. The panning algorithm maintains constant power between adjacent outputs. See below for the pointsource panning variant.\
+\
+\pard\tx360\tx1800\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1780\fi-1780\ql\qnatural\pardirnatural
+
+\b\fs26 \cf0 Input
+\b0\fs24 \
+\
+	
+\b int
+\b0 	In left inlet: 1 means start playing grains; 0 means stop.\
+\
+	
+\b 3rdorder
+\b0 	In left inlet: The word 3rdorder, followed by a 0 or a 1. If 0, transpose using 2nd-order interpolation. If 1, transpose using 3rd-order interpolation. The difference is often not noticeable. By default, jg.granulate~ uses 2nd-order interpolation.\
+\
+	
+\b amprange
+\b0 	In left inlet: The word amprange, followed by two floats (min and max), which define the range of grain amplitude multipliers, in dBFS, used. The default range is 0-0 (that is, no amplitude scaling).\
+\
+	
+\b chan
+\b0 	In left inlet: The word chan, followed by an integer giving the input channel number. This is ignored if it exceeds the channel count of the buffer~ object containing the sample to be granulated. By default, the input channel number is 1.\
+\
+	
+\b durrange
+\b0 	In left inlet: The word durrange, followed by two floats (min and max), which define the range of grain durations used, in milliseconds. The default range is 10-10.\
+\
+	
+\b env
+\b0 	In left inlet: The word env, followed by the name of a buffer~ object containing the grain envelope. By default, jg.granulate~ uses a hanning window envelope. To return to this envelope after using a custom one, send the env message with no buffer name, or "env hanning".\
+\
+	
+\b grid
+\b0 	In left inlet: The word grid, followed by one or more ints, constructs a rhythmic template used by jg.granulate~ to decide whether to play a grain. The granulator cycles through the list of ints. If the current int is non-zero, the grain is played; if the current int is zero, the grain is not played. This feature is meant to be used when the grain rate is sub-audio \'97 slow enough to produce a series of pulses, rather than a smooth stream of sound. To cancel the template, send the grid messge alone, with no numbers.\
+\
+	
+\b hop
+\b0 	In left inlet: The word hop, followed by one float giving the time between successive grains (i.e., the "hop time"), in milliseconds. This is the inverse of the grain rate (set by the rate message). Sending a hop message overrides the current rate value. The default hop time is 10 milliseconds.\
+\
+	
+\b info
+\b0 	In left inlet: The word info, with no arguments, tells jg.granulate~ to print the current number of simultaneous voices it is playing, as well as the maximum number of simultaneous voices played since object creation or the last info message. It also prints all the settings, each tagged with the name of the message that sets it. A single word giving one of these tags (such as "grid") will print just that setting. For the buffer name, use "buffer"; for the voice stats, use "voices."\
+\
+	
+\b injitter
+\b0 	In left inlet: The word injitter, followed by one float giving the maximum randomly determined amount, in milliseconds, to add or subtract from the input start time for a grain. By default, injitter is 0.\
+\
+	
+\b inskip
+\b0 	In left inlet: The word inskip, followed by one float giving a start time in milliseconds within the buffer to start granulating. This time is automatically constrained to fall within the granulation window (winrange). Inskip can be updated rapidly for stutter or jump-cut effects.\
+\
+	
+\b outjitter
+\b0 	In left inlet: The word outjitter, followed by one float giving the maximum randomly determined amount, in milliseconds, to add or subtract from the output start time for a grain, which is determined by the grain hop time (hop) or grain rate (rate). By default, outjitter is 0.\
+\
+	
+\b panrange
+\b0 	In left inlet: The word panrange, followed by two floats (min and max), which define the width of the image and the position of its center point: 1.0 is hard left; 2.0 is hard right for stereo. 2.5 is between the 2nd and 3rd channels in a multichannel setup. The numbers must be in ascending order. Pan values for individual grains are chosen randomly within this range. The default range is 1.0 to the number of output channels. Example: "panrange 1.2 1.6" would center the stereo image around 1.4 (a little left of center), and pan between 1.2 (almost hard left) and 1.6 (a little right of center). This message is ignored if the number of jg.granulate~ output channels is less than 2. See the pointsource message for alternate panning behavior.\
+\
+	
+\b pointsource
+\b0 	In left inlet: The word pointsource, followed by a 0 or a 1. If 1, the randomly selected pan value for a grain \'97 chosen within the range of values given by the panrange message \'97 is rounded to the nearest whole number, and the grain goes only to that channel number. If 0, panning behaves as described for the panrange  message. The default value of pointsource is 0.\
+\
+	
+\b position
+\b0 	In left inlet: The word position, followed by a 0 or a 1. If 1, the position of the read pointer within the current buffer, in samples relative to the start of the buffer, is sent out the right-most outlet for every block of samples processed. If 0, the position is not reported. The default value of position is 0.\
+\
+	
+\b rate
+\b0 	In left inlet: The word rate, followed by one float giving the grain rate, in grains per second. This is the inverse of the grain hop time (set by the hop message). Sending a rate message overrides the current hop value. The default grain rate is 100 grains per second.\
+\
+	
+\b reinit
+\b0 	In left inlet: The word reinit, followed by a 0 or a 1. If 1, when restarting playback (with int message), jg.granulate~ begins first grain at next signal vector start, instead of wherever the next grain was due to begin; cancels grains that were still in progress when playback was last stopped; and restarts any rhythmic grid in effect (grid message). This is useful for synchronizing playback of sparse grains in a rhythmic context. (Note that this synchronization cannot be sample-accurate, since playback start is quantized to signal vector boundaries.) If 0, when restarting playback, continue where playback was when last stopped, possibly in the middle of a grain. The default value of reinit is 1.\
+\
+	
+\b reverse
+\b0 	In left inlet: The word reverse, followed by a 0 or a 1. If 1, when traversal is backward (i.e., trav message is negative), grains play in reverse. If 0, grains play forward, even when traversal is backward. The default value of reverse is 0. Note that a value of 1 can cause a glitch when traversal goes from positive to negative, or vice versa.\
+\
+	
+\b seed
+\b0 	In left inlet: The word seed, followed by an integer greater than or equal to 0. By default, the seed is 0.\
+\
+	
+\b set
+\b0 	In left inlet: The word set, followed by the name of a buffer~ object, to switch the buffer used for granulation.\
+\
+	
+\b trans
+\b0 	In left inlet: The word trans, followed by one float giving the grain transposition in semitones, expressed as a decimal number, so that transpositions between semitones are possible. The default transposition is 0.\
+\
+	
+\b transcoll
+\b0 	In left inlet: The word transcoll, followed by two or more floats giving grain transposition levels in semitones, expressed as decimal numbers, so that transpositions between semitones are possible. These transpositions are selected randomly during granulation. The selected transposition is added to the value set using the trans message. The message "transcoll" (with no argument) cancels a previous transposition collection. By default, there is no transposition collection.\
+\
+	
+\b transjitter
+\b0 	In left inlet: The word transjitter, followed by one float giving the maximum amount to add or subtract from the current transposition value in semitones, expressed as a decimal number, so that transpositions between semitones are possible. The default transposition jitter is 0. If a transposition collection (transcoll) is active, transjitter is ignored.\
+\
+	
+\b trav
+\b0 	In left inlet: The word trav, followed by one float giving the rate at which jg.granulate~ traverses the input window. 0 means no movement; 1 moves forward at the normal playback rate; 2.5 moves forward at a rate that is 2.5 times the normal rate; -1 moves backward at the normal rate. The default rate is 1.\
+\
+	
+\b winrange
+\b0 	In left inlet: The word winrange, followed by two floats (min and max), which define the input window -- the time range, in milliseconds, of the sample buffer~ to granulate. If max is set to zero, it will be set to the end of the current buffer contents. Note that the winrange constrains the starting point when reading a grain from the buffer. The grain can play past the window end point. For this reason, it's best to inset the window from the end of the buffer by the maximum grain duration if there is a chance that the start point for input could be just before the window end. Otherwise, the grain could run out of sound to read. (When reverse reading is on, the same advice applies to the window start.)\
+\
+	
+\b wrap
+\b0 	In left inlet: The word wrap, followed by a 0 or a 1. If 1, when jg.granulate~ reaches the end of the input window, it wraps around to the beginning. If 0, it doesn't wrap, and you must use the inskip command to restart playback after the granulator reaches the end of the input window. If wrap is off, and you turn it back on, you must use the inskip command to restart playback. The default value of wrap is 1.\
+\
+	
+\b (mouse)
+\b0 	Double-clicking on a jg.granulate~ object opens the sample display window of the buffer~ object associated with the jg.granulate~ object.\
+\
+\pard\tx360\tx1800\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1780\fi-1780\ql\qnatural\pardirnatural
+
+\b \cf0 v1.2
+\b0 \
+}

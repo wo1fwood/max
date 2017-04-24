@@ -1,0 +1,44 @@
+0 0;
+
+0 1
+patch-status cue 1;
+
+0 2
+patch-status cue 2;
+
+0 3
+patch-status cue 3;
+
+0 4
+patch-status cue 4;
+
+0 5
+patch-status cue 5;
+
+0 6
+patch-status cue 6;
+
+0 7
+patch-status cue 7;
+2300 patch-status DELAY on 7;
+
+0 8
+patch-status cue 8;
+1000 patch-status 8-1 delay;
+1500 patch-status 8-2 delay;
+
+0 9
+patch-status cue 9;
+
+0 10
+patch-status cue 10;
+
+0 11
+patch-status cue 11;
+
+0 12
+patch-status cue 12;
+
+0 13
+patch-status dd;
+cue-num-halt 0;
