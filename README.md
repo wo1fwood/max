@@ -5,12 +5,12 @@ Welcome to my max folder on github. I wanted to share this repository of my work
 I've built a lot of utilities and modules that have greatly helped my work in this environment. These abstractions are anything from core-level utilities that help set my project environment, to configuring input controllers (like MIDI or USB pedals), various synthesis modules, all the way to handling small tasks, like building a cue handler, user-interface objects, to a pseudo-random number generator that can be given a range.
 
 # Folders
-My folder structure is as follows: 
+My folder structure is as follows:
 
 - **modules:** contains all audio processing modules, or gen~ abstractions
 - **tests:** specific tasks that I've worked on that generally eventually become working abstractions
 - **tutorials:** max patches that I've used for teaching
-- **vendor:** third party vendor externals. My preference of naming from working as a web developer. I should note that I'm primarily a Windows user, so most of my externals here will function in both macOS and Windows.
+- **vendor:** externals from third party vendors. I should note that I'm primarily a Windows user, so most of my externals here will function in both macOS and Windows.
 - **utilities:** this folder contains various non-audio utilities, from small utilities to core-level, and even user-interface objects
 
 # Namespaces
