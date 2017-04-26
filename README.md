@@ -1,11 +1,13 @@
-# max
-Welcome to my max folder on github. I wanted to share this repository of my work and research in the audio synthesis VPL (visual programming language) max, also known as Max/MSP. The main purpose is because I'm a firm believer on openly sharing what we know as programmers. As seen in the web development world to incredible effect, when programmers share how they've solved problems (or even approached them), this facilitates a better understanding of tasks we may be trying to complete, and over time, creates an incredibly robust support structure for those wishing to learn themselves.
+# Max
+Welcome to my Max folder on github. I wanted to share this repository of my work and research in the audio synthesis VPL Max, also known as Max/MSP.
+
+The main purpose behind this is that I'm a firm believer of openly sharing what we've learned and how we do things as programmers. As a benificiary of this very practice, I feel it imperative to show how I work and think about things in the hopes that it might help others to think about how they structure their Max projects, or approach similar problems I've encountered.
+
 
 # What You'll Find Here
-I've built a lot of utilities and modules that have greatly helped my work in this environment. These abstractions are anything from core-level utilities that help set my project environment, to configuring input controllers (like MIDI or USB pedals), various synthesis modules, all the way to handling small tasks, like building a cue handler, user-interface objects, to a pseudo-random number generator that can be given a range.
+I've built a lot of utilities and modules that have greatly helped my work. These abstractions are anything from core-level utilities that help set my project environment, to configuring input controllers (like MIDI or USB pedals), various synthesis modules, all the way to handling small tasks like building a cue handler, user-interface objects, loading external text files, or pseudo-random number generators.
 
-# Folders
-My folder structure is as follows:
+When looking for various files, the patches are organized into the following folders:
 
 - **modules:** contains all audio processing modules, or gen~ abstractions
 - **tests:** specific tasks that I've worked on that generally eventually become working abstractions
@@ -14,9 +16,9 @@ My folder structure is as follows:
 - **utilities:** this folder contains various non-audio utilities, from small utilities to core-level, and even user-interface objects
 
 # Namespaces
-Namespaces are a way to greatly reduce time in writing new objects in max. By prefixing abstractions with these identifiers I can easily distinguish the kind of task the abstraction is designed to do. And with code hints, max will list similar object-types to me as I'm coding. Here are what my namespaces mean:
+I also use Namespacing in my work. Namespaces are a way to greatly reduce time in creating objects in max. By prefixing abstractions with these identifiers I can easily distinguish the kind of task the abstraction is designed to do. And with code hints, max will list similar object-types to me as I'm coding. Here are what my namespaces mean:
 
-- **c.abstraction-name:** A core/top-level utility, most often required for projects to function.
+- **c.abstraction-name:** A core-level utility, most often required for projects to function.
 - **o.abstraction-name:** A visual Object.prototype utility, mostly for user-interfaces.
 - **u.abstraction-name:** A general helper utility that isn't a core util, or a GUI object.
 - **m.abstraction-name:** A processing module that is a logical construction of audio-rate tasks. Generally not a child of another module or util.
