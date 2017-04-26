@@ -16,7 +16,7 @@ When looking for various files, the patches are organized into the following fol
 - **utilities:** this folder contains various non-audio utilities, from small utilities to core-level, and even user-interface objects
 
 # Namespaces
-I also use Namespacing in my work. Namespaces are a way to greatly reduce time in creating objects in max. By prefixing abstractions with these identifiers I can easily distinguish the kind of task the abstraction is designed to do. And with code hints, max will list similar object-types to me as I'm coding. Here are what my namespaces mean:
+I also use Namespacing in my work. Namespaces are a way to greatly reduce time in creating objects in max. By prefixing abstractions with unique identifiers I can easily distinguish the kind of task or function the abstraction is designed to handle. Combined with code hints, max will then automatically list similar object types to me as I'm coding. Here are what my namespaces mean:
 
 - **c.abstraction-name:** A core-level utility, most often required for projects to function.
 - **o.abstraction-name:** A visual Object.prototype utility, mostly for user-interfaces.
