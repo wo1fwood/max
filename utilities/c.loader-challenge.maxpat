@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 2,
-			"revision" : 1,
+			"minor" : 3,
+			"revision" : 3,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 67.0, 140.0, 374.0, 288.0 ],
+		"rect" : [ 67.0, 140.0, 401.0, 370.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,29 @@
 		"subpatcher_template" : "sigil",
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-5",
-					"linecount" : 6,
+					"fontface" : 2,
+					"fontname" : "Lato",
+					"fontsize" : 13.0,
+					"id" : "obj-7",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 32.0, 16.0, 128.0, 89.0 ],
+					"patching_rect" : [ 48.0, 272.0, 304.0, 53.0 ],
+					"style" : "",
+					"text" : "Copyright © 2017, Nikolas Jeleniauskas\nLicensed under the MIT license\nhttp://www.opensource.org/licenses/mit-license.php",
+					"textcolor" : [ 0.137255, 0.152941, 0.160784, 0.5 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 48.0, 48.0, 240.0, 48.0 ],
 					"style" : "",
 					"text" : "challenge project-loader to prevent multiple copies of the main patch from opening (windows bug)"
 				}
@@ -56,7 +73,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 64.0, 176.0, 60.0, 22.0 ],
+					"patching_rect" : [ 80.0, 176.0, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "loadbang"
 				}
@@ -69,7 +86,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 32.0, 128.0, 117.0, 22.0 ],
+					"patching_rect" : [ 48.0, 128.0, 117.0, 22.0 ],
 					"style" : "",
 					"text" : "r global_stop-helper"
 				}
@@ -81,7 +98,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 32.0, 224.0, 118.0, 22.0 ],
+					"patching_rect" : [ 48.0, 224.0, 118.0, 22.0 ],
 					"style" : "",
 					"text" : "s global_patch-state"
 				}

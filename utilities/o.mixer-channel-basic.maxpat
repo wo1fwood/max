@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 3,
 			"revision" : 3,
-			"architecture" : "x64",
+			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 87.0, 224.0, 584.0, 736.0 ],
+		"rect" : [ 87.0, 224.0, 402.0, 533.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,23 @@
 		"subpatcher_template" : "ears_template",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 2,
+					"fontname" : "Lato",
+					"fontsize" : 13.0,
+					"id" : "obj-1",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 48.0, 432.0, 304.0, 53.0 ],
+					"style" : "",
+					"text" : "Copyright © 2017, Nikolas Jeleniauskas\nLicensed under the MIT license\nhttp://www.opensource.org/licenses/mit-license.php",
+					"textcolor" : [ 0.137255, 0.152941, 0.160784, 0.5 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"bgcolor" : [ 0.137255, 0.152941, 0.160784, 0.0 ],
 					"coldcolor" : [ 0.13, 0.42, 0.2, 1.0 ],
 					"hotcolor" : [ 0.87, 0.82, 0.55, 1.0 ],
@@ -50,7 +67,7 @@
 					"offcolor" : [ 0.227451, 0.243137, 0.258824, 1.0 ],
 					"outlettype" : [ "float" ],
 					"overloadcolor" : [ 0.8, 0.35, 0.38, 1.0 ],
-					"patching_rect" : [ 144.0, 256.0, 16.0, 160.0 ],
+					"patching_rect" : [ 112.0, 176.0, 16.0, 160.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 15.0, 0.0, 12.0, 80.0 ],
 					"prototypename" : "M4L.vert.black",
@@ -67,7 +84,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 192.0, 109.0, 22.0 ],
+					"patching_rect" : [ 128.0, 112.0, 109.0, 22.0 ],
 					"style" : "",
 					"text" : "scale -60. 0. 0 127"
 				}
@@ -80,7 +97,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 160.0, 160.0, 43.0, 22.0 ],
+					"patching_rect" : [ 128.0, 80.0, 43.0, 22.0 ],
 					"style" : "",
 					"text" : "line 0."
 				}
@@ -93,7 +110,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 128.0, 31.0, 22.0 ],
+					"patching_rect" : [ 128.0, 48.0, 31.0, 22.0 ],
 					"style" : "",
 					"text" : "r #1"
 				}
@@ -105,7 +122,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 80.0, 448.0, 60.0, 22.0 ],
+					"patching_rect" : [ 48.0, 368.0, 60.0, 22.0 ],
 					"style" : "",
 					"text" : "send~ #4"
 				}
@@ -118,7 +135,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 80.0, 128.0, 73.0, 22.0 ],
+					"patching_rect" : [ 48.0, 48.0, 73.0, 22.0 ],
 					"style" : "",
 					"text" : "receive~ #3"
 				}
@@ -134,7 +151,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 80.0, 256.0, 32.0, 160.0 ],
+					"patching_rect" : [ 48.0, 176.0, 32.0, 160.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 0.0, 0.0, 16.0, 80.0 ],
 					"size" : 128,
@@ -152,7 +169,7 @@
 					"mode" : 0,
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 192.0, 256.0, 16.0, 160.0 ],
+					"patching_rect" : [ 160.0, 176.0, 16.0, 160.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 16.0, 0.0, 12.0, 80.0 ],
 					"proportion" : 0.39,
@@ -177,7 +194,7 @@
 					"destination" : [ "obj-78", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 89.5, 432.0, 129.0, 432.0, 129.0, 240.0, 153.5, 240.0 ],
+					"midpoints" : [ 57.5, 352.0, 97.0, 352.0, 97.0, 160.0, 121.5, 160.0 ],
 					"order" : 0,
 					"source" : [ "obj-13", 0 ]
 				}

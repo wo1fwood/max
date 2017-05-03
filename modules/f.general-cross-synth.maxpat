@@ -4,12 +4,12 @@
 		"appversion" : 		{
 			"major" : 7,
 			"minor" : 3,
-			"revision" : 2,
+			"revision" : 3,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 427.0, 268.0, 378.0, 474.0 ],
+		"rect" : [ 125.0, 160.0, 404.0, 439.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,29 @@
 		"subpatcher_template" : "sigil",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 2,
+					"fontname" : "Lato",
+					"fontsize" : 13.0,
+					"id" : "obj-1",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 48.0, 352.0, 304.0, 53.0 ],
+					"style" : "",
+					"text" : "Copyright © 2017, Nikolas Jeleniauskas\nLicensed under the MIT license\nhttp://www.opensource.org/licenses/mit-license.php",
+					"textcolor" : [ 0.137255, 0.152941, 0.160784, 0.5 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-8",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 176.0, 160.0, 87.0, 22.0 ],
+					"patching_rect" : [ 176.0, 112.0, 87.0, 22.0 ],
 					"style" : "",
 					"text" : "cartopol~"
 				}
@@ -57,7 +74,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 176.0, 242.0, 144.0, 47.0 ],
+					"patching_rect" : [ 176.0, 194.0, 144.0, 47.0 ],
 					"style" : "",
 					"text" : "multiply amp, add phase of source-1 and source-2"
 				}
@@ -70,7 +87,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 116.0, 242.0, 29.5, 22.0 ],
+					"patching_rect" : [ 116.0, 194.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "+~"
 				}
@@ -83,7 +100,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 48.0, 242.0, 29.5, 22.0 ],
+					"patching_rect" : [ 48.0, 194.0, 29.5, 22.0 ],
 					"style" : "",
 					"text" : "*~"
 				}
@@ -96,7 +113,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 48.0, 289.0, 87.0, 22.0 ],
+					"patching_rect" : [ 48.0, 241.0, 87.0, 22.0 ],
 					"style" : "",
 					"text" : "poltocar~"
 				}
@@ -109,7 +126,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 48.0, 157.0, 87.0, 22.0 ],
+					"patching_rect" : [ 48.0, 109.0, 87.0, 22.0 ],
 					"style" : "",
 					"text" : "cartopol~"
 				}
@@ -122,7 +139,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "signal" ],
-					"patching_rect" : [ 176.0, 96.0, 99.0, 22.0 ],
+					"patching_rect" : [ 176.0, 48.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "fftin~ 2 hamming"
 				}
@@ -134,7 +151,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 48.0, 344.0, 87.0, 22.0 ],
+					"patching_rect" : [ 48.0, 296.0, 87.0, 22.0 ],
 					"style" : "",
 					"text" : "fftout~ 1"
 				}
@@ -147,7 +164,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "signal" ],
-					"patching_rect" : [ 48.0, 96.0, 99.0, 22.0 ],
+					"patching_rect" : [ 48.0, 48.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "fftin~ 1 hamming"
 				}

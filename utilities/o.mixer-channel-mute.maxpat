@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 2,
-			"revision" : 1,
+			"minor" : 3,
+			"revision" : 3,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 51.0, 293.0, 697.0, 562.0 ],
+		"rect" : [ 51.0, 293.0, 689.0, 672.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,23 @@
 		"style" : "",
 		"subpatcher_template" : "sigil",
 		"boxes" : [ 			{
+				"box" : 				{
+					"fontface" : 2,
+					"fontname" : "Lato",
+					"fontsize" : 13.0,
+					"id" : "obj-7",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 48.0, 560.0, 304.0, 53.0 ],
+					"style" : "",
+					"text" : "Copyright © 2017, Nikolas Jeleniauskas\nLicensed under the MIT license\nhttp://www.opensource.org/licenses/mit-license.php",
+					"textcolor" : [ 0.137255, 0.152941, 0.160784, 0.5 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-69",
 					"maxclass" : "message",
@@ -463,6 +480,7 @@
 					"destination" : [ "obj-22", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 2,
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -473,6 +491,7 @@
 					"destination" : [ "obj-60", 1 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 0,
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -482,6 +501,7 @@
 					"destination" : [ "obj-66", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 1,
 					"source" : [ "obj-24", 0 ]
 				}
 
@@ -491,6 +511,7 @@
 					"destination" : [ "obj-21", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 1,
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -501,6 +522,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 73.5, 429.0, 51.0, 429.0, 51.0, 282.0, 100.0, 282.0 ],
+					"order" : 0,
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -547,6 +569,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 327.0, 243.0, 361.5, 243.0 ],
+					"order" : 1,
 					"source" : [ "obj-52", 1 ]
 				}
 
@@ -557,6 +580,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 313.5, 135.0, 313.5, 135.0 ],
+					"order" : 1,
 					"source" : [ "obj-52", 0 ]
 				}
 
@@ -567,6 +591,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 327.0, 241.0, 265.5, 241.0 ],
+					"order" : 2,
 					"source" : [ "obj-52", 1 ]
 				}
 
@@ -577,6 +602,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 313.5, 236.0, 233.5, 236.0 ],
+					"order" : 2,
 					"source" : [ "obj-52", 0 ]
 				}
 
@@ -587,6 +613,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 313.5, 238.0, 473.5, 238.0 ],
+					"order" : 0,
 					"source" : [ "obj-52", 0 ]
 				}
 
@@ -597,6 +624,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 327.0, 233.0, 569.5, 233.0 ],
+					"order" : 0,
 					"source" : [ "obj-52", 1 ]
 				}
 
@@ -625,6 +653,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 313.5, 329.0, 51.0, 329.0, 51.0, 439.0, 73.5, 439.0 ],
+					"order" : 0,
 					"source" : [ "obj-59", 0 ]
 				}
 
@@ -635,6 +664,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 313.5, 333.0, 73.5, 333.0 ],
+					"order" : 1,
 					"source" : [ "obj-59", 0 ]
 				}
 
@@ -692,6 +722,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 473.5, 297.0, 444.0, 297.0, 444.0, 204.0, 138.0, 204.0, 138.0, 99.0, 73.5, 99.0 ],
+					"order" : 1,
 					"source" : [ "obj-68", 0 ]
 				}
 
@@ -703,6 +734,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 473.5, 346.0, 117.0, 346.0, 117.0, 387.0, 73.5, 387.0 ],
+					"order" : 0,
 					"source" : [ "obj-68", 0 ]
 				}
 
@@ -714,6 +746,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 569.5, 306.0, 444.0, 306.0, 444.0, 204.0, 138.0, 204.0, 138.0, 99.0, 73.5, 99.0 ],
+					"order" : 1,
 					"source" : [ "obj-69", 0 ]
 				}
 
@@ -725,6 +758,7 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"midpoints" : [ 569.5, 351.0, 123.0, 351.0, 123.0, 392.0, 73.5, 392.0 ],
+					"order" : 0,
 					"source" : [ "obj-69", 0 ]
 				}
 

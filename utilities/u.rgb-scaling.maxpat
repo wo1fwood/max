@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 2,
-			"revision" : 1,
+			"minor" : 3,
+			"revision" : 3,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 58.0, 145.0, 449.0, 375.0 ],
+		"rect" : [ 62.0, 200.0, 433.0, 435.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,29 @@
 		"subpatcher_template" : "sigil",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 2,
+					"fontname" : "Lato",
+					"fontsize" : 13.0,
+					"id" : "obj-8",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 48.0, 336.0, 304.0, 53.0 ],
+					"style" : "",
+					"text" : "Copyright © 2017, Nikolas Jeleniauskas\nLicensed under the MIT license\nhttp://www.opensource.org/licenses/mit-license.php",
+					"textcolor" : [ 0.137255, 0.152941, 0.160784, 0.5 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-7",
 					"maxclass" : "newobj",
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 289.0, 175.0, 99.0, 22.0 ],
+					"patching_rect" : [ 273.0, 175.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "scale 0 255 0. 1."
 				}
@@ -56,7 +73,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 177.0, 175.0, 99.0, 22.0 ],
+					"patching_rect" : [ 161.0, 175.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "scale 0 255 0. 1."
 				}
@@ -69,7 +86,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 175.0, 99.0, 22.0 ],
+					"patching_rect" : [ 48.0, 175.0, 99.0, 22.0 ],
 					"style" : "",
 					"text" : "scale 0 255 0. 1."
 				}
@@ -82,7 +99,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 224.0, 50.0, 22.0 ],
+					"patching_rect" : [ 48.0, 224.0, 50.0, 22.0 ],
 					"style" : "",
 					"text" : "pak f f f"
 				}
@@ -95,7 +112,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "int", "int", "int" ],
-					"patching_rect" : [ 64.0, 111.0, 67.0, 22.0 ],
+					"patching_rect" : [ 48.0, 111.0, 67.0, 22.0 ],
 					"style" : "",
 					"text" : "unpack i i i"
 				}
@@ -105,10 +122,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-2",
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 64.0, 272.0, 30.0, 30.0 ],
+					"patching_rect" : [ 48.0, 272.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 
@@ -117,11 +135,12 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-1",
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 64.0, 48.0, 30.0, 30.0 ],
+					"patching_rect" : [ 48.0, 48.0, 30.0, 30.0 ],
 					"style" : ""
 				}
 

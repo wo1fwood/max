@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 2,
-			"revision" : 1,
+			"minor" : 3,
+			"revision" : 3,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 282.0, 592.0, 450.0, 432.0 ],
+		"rect" : [ 131.0, 179.0, 480.0, 529.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,12 +38,29 @@
 		"subpatcher_template" : "sigil",
 		"boxes" : [ 			{
 				"box" : 				{
+					"fontface" : 2,
+					"fontname" : "Lato",
+					"fontsize" : 13.0,
+					"id" : "obj-7",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 48.0, 432.0, 304.0, 53.0 ],
+					"style" : "",
+					"text" : "Copyright © 2017, Nikolas Jeleniauskas\nLicensed under the MIT license\nhttp://www.opensource.org/licenses/mit-license.php",
+					"textcolor" : [ 0.137255, 0.152941, 0.160784, 0.5 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 336.0, 107.0, 22.0 ],
+					"patching_rect" : [ 176.0, 352.0, 107.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf %s%s/%s"
 				}
@@ -55,7 +72,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 160.0, 368.0, 107.0, 22.0 ],
+					"patching_rect" : [ 176.0, 384.0, 107.0, 22.0 ],
 					"style" : "",
 					"text" : "print Project_Root"
 				}
@@ -68,7 +85,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 96.0, 96.0, 89.0, 22.0 ],
+					"patching_rect" : [ 112.0, 112.0, 89.0, 22.0 ],
 					"style" : "",
 					"text" : "loadmess path"
 				}
@@ -81,7 +98,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 288.0, 128.0, 27.0, 22.0 ],
+					"patching_rect" : [ 304.0, 144.0, 27.0, 22.0 ],
 					"style" : "",
 					"text" : "iter"
 				}
@@ -94,7 +111,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 241.0, 240.0, 24.0, 24.0 ],
+					"patching_rect" : [ 257.0, 256.0, 24.0, 24.0 ],
 					"style" : ""
 				}
 
@@ -106,7 +123,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 288.0, 96.0, 123.0, 22.0 ],
+					"patching_rect" : [ 304.0, 112.0, 123.0, 22.0 ],
 					"style" : "",
 					"text" : "r global_directories"
 				}
@@ -119,9 +136,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 33.5, 32.0, 324.0, 48.0 ],
+					"patching_rect" : [ 48.0, 48.0, 344.0, 48.0 ],
 					"style" : "",
-					"text" : "gather the main directory for utilites, modules, and audio assets. Auto-appends them to the main File Preferences (temporary only)."
+					"text" : "Set the main directory for utilites, modules, and audio assets. Auto-appends folders to the main File Preferences (temporary write only)."
 				}
 
 			}
@@ -132,7 +149,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 240.0, 59.0, 22.0 ],
+					"patching_rect" : [ 176.0, 256.0, 59.0, 22.0 ],
 					"style" : "",
 					"text" : "tosymbol"
 				}
@@ -145,7 +162,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 208.0, 79.0, 22.0 ],
+					"patching_rect" : [ 176.0, 224.0, 79.0, 22.0 ],
 					"style" : "",
 					"text" : "absolutepath"
 				}
@@ -158,7 +175,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.5, 320.0, 98.0, 22.0 ],
+					"patching_rect" : [ 48.0, 336.0, 98.0, 22.0 ],
 					"style" : "",
 					"text" : "prepend append"
 				}
@@ -171,7 +188,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 160.0, 288.0, 147.0, 22.0 ],
+					"patching_rect" : [ 176.0, 304.0, 147.0, 22.0 ],
 					"style" : "",
 					"text" : "sprintf %s%s/%s"
 				}
@@ -184,7 +201,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 33.5, 368.0, 89.0, 22.0 ],
+					"patching_rect" : [ 48.0, 384.0, 89.0, 22.0 ],
 					"style" : "",
 					"text" : "filepath search"
 				}
@@ -197,7 +214,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 96.0, 160.0, 83.0, 22.0 ],
+					"patching_rect" : [ 112.0, 176.0, 83.0, 22.0 ],
 					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
@@ -210,7 +227,8 @@
 					"destination" : [ "obj-6", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 169.5, 274.0, 145.0, 274.0, 145.0, 327.0, 169.5, 327.0 ],
+					"midpoints" : [ 185.5, 290.0, 161.0, 290.0, 161.0, 343.0, 185.5, 343.0 ],
+					"order" : 0,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -220,6 +238,7 @@
 					"destination" : [ "obj-66", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 1,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -229,7 +248,7 @@
 					"destination" : [ "obj-66", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 250.5, 274.0, 169.5, 274.0 ],
+					"midpoints" : [ 266.5, 290.0, 185.5, 290.0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
@@ -284,7 +303,7 @@
 					"destination" : [ "obj-3", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"midpoints" : [ 169.5, 314.5, 43.0, 314.5 ],
+					"midpoints" : [ 185.5, 330.5, 57.5, 330.5 ],
 					"source" : [ "obj-66", 0 ]
 				}
 
@@ -303,6 +322,7 @@
 					"destination" : [ "obj-10", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 1,
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -312,6 +332,7 @@
 					"destination" : [ "obj-66", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 0,
 					"source" : [ "obj-8", 0 ]
 				}
 
