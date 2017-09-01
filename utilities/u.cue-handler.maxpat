@@ -100,9 +100,9 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 576.0, 464.0, 88.0, 22.0 ],
+					"patching_rect" : [ 560.0, 464.0, 97.0, 22.0 ],
 					"style" : "",
-					"text" : "r cue-num-halt"
+					"text" : "r cue-status-halt"
 				}
 
 			}
@@ -1199,7 +1199,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"midpoints" : [ 585.5, 568.0, 665.5, 568.0 ],
+					"midpoints" : [ 569.5, 568.0, 665.5, 568.0 ],
 					"source" : [ "obj-4", 0 ]
 				}
 
