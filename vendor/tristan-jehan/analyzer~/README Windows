@@ -1,0 +1,2 @@
+Paul Hill has ported the FFT-based analysis externals for Windows using FFTw. 
+You first need to install the fftw3.dll into your Max/MSP folder.
